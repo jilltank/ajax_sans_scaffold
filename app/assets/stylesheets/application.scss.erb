@@ -16,18 +16,21 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'bootstrap-datetimepicker';
 
 body{
 	<% if Time.now.to_i % 2 == 0 %>
 		background: url(<%= asset_path "back.jpg" %>) no-repeat center center fixed;
+		background-position: cover;
 	<% else %>
-		background: url(<%= asset_path "back2.jpg" %>);
+		background: url(<%= asset_path "back2.jpg" %>) no-repeat center center fixed;
+		background-position: cover;
 	<% end %>
 	font-family: 'Philosopher', sans-serif;
-	background-position: cover;
+	padding:20px;
 }
-.container{
-	background-color: rgba(255,255,255,0.85);
+.wrapper{
+	background-color: rgba(255,255,255,0.8);
 }
 h1{
 font-family: 'Londrina Sketch', cursive;

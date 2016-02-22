@@ -1,1 +1,8 @@
 <h1>All Tasks</h1>
+
+<% @tasks.each do |t| %>
+	<p><%= t.description %></p>
+	<p><%= t.deadline %></p>
+<% end %>
+
+<%= link_to "New Task", new_task_path, class: "btn btn-info" %>
